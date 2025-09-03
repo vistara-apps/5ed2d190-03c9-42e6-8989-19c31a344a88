@@ -23,7 +23,8 @@
     "autoprefixer": "^10.4.0",
     "openai": "^4.47.1",
     "lucide-react": "^0.263.1",
-    "framer-motion": "^10.16.5"
+    "framer-motion": "^10.16.5",
+    "pino-pretty": "^10.2.3"
   },
   "devDependencies": {
     "@types/node": "^20",
