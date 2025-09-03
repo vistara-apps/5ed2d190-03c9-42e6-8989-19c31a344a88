@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: hsl(220 89% 51%);
+  --accent: hsl(211 100% 81%);
+  --bg: hsl(0 0% 98%);
+  --surface: hsl(0 0% 100%);
+  --text-primary: hsl(222 40% 20%);
+  --text-secondary: hsl(222 40% 40%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px hsla(222, 40%, 20%, 0.08);
+  border: 1px solid hsla(222, 40%, 20%, 0.06);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.22,1,0.36,1);
+}
+
+.btn-primary:hover {
+  background: hsl(220 89% 45%);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.22,1,0.36,1);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid hsla(222, 40%, 20%, 0.1);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 250ms cubic-bezier(0.22,1,0.36,1);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.status-cleared {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.status-uncleared {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.status-unknown {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.risk-low {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.risk-medium {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.risk-high {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.animate-fade-in {
+  animation: fade-in 250ms cubic-bezier(0.22,1,0.36,1);
+}
+
+.animate-slide-up {
+  animation: slide-up 250ms cubic-bezier(0.22,1,0.36,1);
+}
